@@ -2,7 +2,7 @@ import setuptools
 
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
-PROJECT_NAME ="oneNeuron_pypi"
+PROJECT_NAME ="one_neuron_pypi"
 USERNAME="sandeep3119"
 setuptools.setup(
     name=f"{PROJECT_NAME}-{USERNAME}",
@@ -24,4 +24,8 @@ setuptools.setup(
     package_dir={"": "src"},
     packages=setuptools.find_packages(where="src"),
     python_requires=">=3.7",
+    install_requires=[
+        'numpy',
+        'tqdm',
+    ]
 )
